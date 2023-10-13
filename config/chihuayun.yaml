@@ -135,7 +135,7 @@ proxy-groups:
 proxy-providers:
   sanfen:
     type: http
-    url: "https://chiguayun.buzz/api/v1/client/subscribe?token=5d41aeb0a65f6147754426b9d91d2c51"
+    url: "https://chiguayun.buzz/api/v1/client/subscribe?token=5d41aeb0a65f6147754426b9d91d2c"
     path: "./sanfen/sanfen.yaml"
     interval: 1800 
     health-check:
