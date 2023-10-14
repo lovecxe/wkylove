@@ -20,128 +20,203 @@ dns:
     - 223.5.5.5
 
 #===================== OpenClash-General-Settings =====================#
+proxies:
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 proxy-groups:
   - name: "🚀Proxy"
-    type: "select"
+    type: "select"  
     use:
-      - "sanfen" 
-  
+      - "🐇YToo"
+      - "🐇chiguayun"
+      
   - name: "💖Google"
     type: "select"
     proxies:
-      - "🚀Proxy"
+      - "🇺🇸美国高速接入点-01"
+      - "🇺🇸美国高速接入点-02"
+      - "🇺🇸美国高速接入点-03"
+      - "🇺🇸美国高速接入点-04"
     use:
-      - "sanfen"
-   
-  - name: "🐱‍👤TG"
-    type: "select"
-    proxies:
-      - "🚀Proxy"
-    use:
-      - "sanfen"
+      - "🐇YToo"
+      - "🐇chiguayun"  
       
+      
+    
   - name: "🎬 YouTube"
     type: "select"
     proxies:
       - "🚀Proxy"
     use:
-      - "sanfen"    
-     
+      - "🐇YToo"
+      - "🐇chiguayun"
+      
+      
   - name: "📹TikTok"
     type: "select"
     proxies:
-      - "🚀Proxy"
+      - "💖Google"    
     use:
-      - "sanfen"  
-              
+      - "🐇YToo"
+      - "🐇chiguayun"   
+      
+      
+      
   - name: "📺 BiliBili"
     type: "select"
     proxies:
-      - "🚀Proxy"
+      - "🇹🇼 TW台湾-优化入口"
     use:
-      - "sanfen" 
+      - "🐇chiguayun"  
+    # 🇹🇼 TW台湾-优化入口 
+          
       
+  - name: "🐱‍👤TG"
+    type: "select"
+    proxies:
+      - "🚀 手动切换"
+    use:
+      - "🐇YToo" 
   - name: "🎥 Netflix"
     type: "select"
     proxies:
       - "🚀Proxy"
     use:
-      - "sanfen"     
+      - "🐇YToo"    
             
   - name: "👸Disney+"
     type: "select"
     proxies:
       - "🚀Proxy"
     use:
-      - "sanfen"   
-      
+      - "🐇YToo"     
        
-  - name: "🤖openAI"
-    type: "select"
-    proxies:
-      - "🚀Proxy"
-    use:
-      - "sanfen"
-                 
-  - name: "🍎Apple"
-    type: "select"
-    proxies:
-      - "DIRECT"
-      - "🚀Proxy"
+  
       
   - name: "🎬MI_NF"
     type: "select"
     proxies:
       - "DIRECT"
-      - "🚀Proxy"
     use:
-      - "sanfen"               
+      - "🐇YToo"             
+      
+  - name: "🤖openAI"
+    type: "select"
+    use:
+      - "🐇YToo"  
+      
+  - name: "🍎Apple"
+    type: "select"
+    proxies:
+      - "DIRECT"
+      - "🚀Proxy"       
       
   - name: "☁GD"
     type: "select"
     proxies:
-      - "🚀Proxy"
-      
+      - "♻️ 自动选择"
+    use:
+      - "🐇YToo"
+     
+
   - name: "☁OD"
     type: "select"
     proxies:
       - "DIRECT"
-      - "🚀Proxy"
     use:
-      - "sanfen"
+      - "🐇YToo"
+  
 
   - name: "💻VPS"    
     type: "select"
     proxies:
       - "DIRECT"
     use:
-      - "sanfen"
-
+      - "🐇YToo" 
+        
   - name: "💊bd"
     type: "select"
     proxies:
       - "DIRECT"
     use:
-      - "sanfen"
+      - "🐇YToo"            
+      
+         
+  - name: 🚀 手动切换
+    type: select
+    proxies:    
+      - 🇸🇬新加坡高速接入点-01
+      - 🇸🇬新加坡高速接入点-02
+      - 🇸🇬新加坡高速接入点-03
+      - "🇺🇸美国高速接入点-01"
+    
 
-  
- 
-      
-  
- 
-      
-      
+    
+  - name: 🇸🇬 狮城节点
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - 🇸🇬新加坡高速接入点-01
+      - 🇸🇬新加坡高速接入点-02
+      - 🇸🇬新加坡高速接入点-02
+     
+  - name: ♻️ 自动选择
+    type: url-test
+    url: http://www.gstatic.com/generate_204
+    interval: 300
+    tolerance: 50
+    proxies:
+      - "🇺🇸美国高速接入点-01"
+      - "🇺🇸美国高速接入点-02"
+      - "🇺🇸美国高速接入点-03"
+      - "🇺🇸美国高速接入点-04"
   
 proxy-providers:
-  sanfen:
+  🐇YToo:
     type: http
     url: ""
-    path: "./sanfen/sanfen.yaml"
+    path: "./YToo/YToo.yaml"
     interval: 1800 
     health-check:
       enable: true
       interval: 600
-      url: http://www.gstatic.com/generate_204   
+      url: http://www.gstatic.com/generate_204    
+  
+  🐇chiguayun:
+    type: http
+    url: ""
+    path: "./chiguayun/chiguayun.yaml"
+    interval: 1800 
+    health-check:
+      enable: true
+      interval: 600
+      url: http://www.gstatic.com/generate_204
+  
+  
 ###################################################################################################################       
 #联网引用规则
 rule-providers:
@@ -193,14 +268,7 @@ rule-providers:
     url: "https://cdn.jsdelivr.net/gh/Loyalsoldier/clash-rules@release/proxy.txt"
     path: ./ruleset/Proxy.yaml
     interval: 86400
-    
-    #https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bilibili.yaml
-  Bilibili:
-    type: http
-    behavior: classical
-    url: "https://raw.githubusercontent.com/lovecxe/wkylove/main/clash/BilibiliHMT.yaml"
-    path: ./ruleset/Bilibili.yaml
-    interval: 86400  
+  
   
   DisneyPlus:
     type: http
@@ -214,6 +282,14 @@ rule-providers:
     behavior: classical
     url: "https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/HBO.yaml"
     path: ./ruleset/HBO.yaml
+    interval: 86400  
+
+  #https://raw.githubusercontent.com/ACL4SSR/ACL4SSR/master/Clash/Providers/Ruleset/Bilibili.yaml
+  Bilibili:
+    type: http
+    behavior: classical
+    url: "https://raw.githubusercontent.com/lovecxe/wkylove/main/clash/BilibiliHMT.yaml"
+    path: ./ruleset/Bilibili.yaml
     interval: 86400  
 
   NetEaseMusic:
@@ -398,6 +474,7 @@ rules:
   - RULE-SET,Tld-Not-CN,🚀Proxy
   - RULE-SET,TelegramCidr,🐱‍👤TG
 
+  #- RULE-SET,Bilibili,DIRECT
   - RULE-SET,Bilibili,📺 BiliBili
   - RULE-SET,icloud,DIRECT
   - RULE-SET,applications,DIRECT
