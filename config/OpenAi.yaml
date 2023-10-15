@@ -1,7 +1,0 @@
-# 内容：OpenAi🐵 OpenAi
-payload:
-  # 数量：4条
-  - DOMAIN-KEYWORD,openai.com
-  - DOMAIN-SUFFIX,ai.com
-  - DOMAIN-SUFFIX,challenges.cloudflare.com
-  - DOMAIN-SUFFIX,openai.com
